@@ -19,7 +19,6 @@ export function setupServer() {
   app.use(cookieParser());
 
   app.use(authRouter);
-  // app.use(water);
 
   app.use(notFoundHandler);
   app.use(errorHandler);

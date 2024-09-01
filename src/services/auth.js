@@ -84,8 +84,3 @@ export const refreshUsersSession = async ({ sessionId, refreshToken }) => {
     ...newSession,
   });
 };
-// createProfile
-export const createProfile = async (payload) => {
-  const contact = await UsersCollection.create(payload);
-  return contact;
-};
