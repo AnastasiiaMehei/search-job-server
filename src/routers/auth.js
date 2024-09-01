@@ -10,7 +10,6 @@ import { registerUserSchema, loginUserSchema } from '../validation/auth.js';
 import { validateBody } from '../middlewares/validateBody.js';
 const authRouter = Router();
 const jsonParser = json();
-
 authRouter.post(
   '/auth/register',
   jsonParser,
@@ -25,5 +24,4 @@ authRouter.post(
 );
 authRouter.post('/auth/logout', ctrlWrapper(logoutUserController));
 authRouter.post('/auth/refresh', ctrlWrapper(refreshUserSessionController));
-
 export default authRouter;
